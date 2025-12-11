@@ -1,0 +1,230 @@
+@import './variables.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+@media (min-width: 640px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: clamp(1.875rem, 4vw, 3.75rem);
+    font-weight: var(--font-extrabold);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+h4 {
+    font-size: clamp(1.125rem, 2.5vw, 1.875rem);
+}
+
+h5 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+h6 {
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+}
+
+p {
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-base);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* Container */
+/* .container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+} */
+
+.padding-global {
+    padding: 0 var(--container-padding);
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--color-secondary);
+    color: var(--text-white);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary-dark);
+}
+
+/* Utility Classes */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Swiper Custom Styles */
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+
+.swiper-pagination-bullet-custom {
+    width: 12px !important;
+    height: 12px !important;
+    background-color: #d1d5db !important;
+    opacity: 1 !important;
+    margin: 0 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active-custom {
+    background-color: var(--color-primary) !important;
+    width: 32px !important;
+    border-radius: 6px !important;
+}
+
+/* Modal Animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+}
+
+/* Features Cards Sticky Animation */
+.features-card {
+    position: sticky;
+    top: 0;
+}
+
+.features-card-inner {
+    will-change: transform;
+    box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+    transform-origin: center top;
+}
+
+.features-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.features-card-title {
+    padding: 0;
+    margin: 0;
+}
+
+.features-card-description {
+    margin: 0;
+}
