@@ -20,23 +20,23 @@ const HowItWorks = () => {
       title: "Pack Your Meal",
       description:
         "Place your favourite home-cooked meal into the non-stick, sealed inner tray.",
-      gradient: "from-orange-500 via-red-500 to-pink-500",
-      bgGradient: "from-orange-50 via-red-50 to-pink-50",
+      gradient: "from-green-600 to-green-800",
+      bgGradient: "from-green-50 via-emerald-50 to-teal-50",
     },
     {
       number: "02",
       title: "Choose Your Heat",
       description:
         "Use the intuitive digital interface to select your desired serving temperature.",
-      gradient: "from-blue-500 via-purple-500 to-indigo-500",
-      bgGradient: "from-blue-50 via-purple-50 to-indigo-50",
+      gradient: "from-green-600 to-green-800",
+      bgGradient: "from-green-50 via-emerald-50 to-teal-50",
     },
     {
       number: "03",
       title: "Perfectly Warm",
       description:
         "Your Hotmate maintains the ideal temperature until you're ready to eat. Open and enjoy!",
-      gradient: "from-green-500 via-emerald-500 to-teal-500",
+      gradient: "from-green-600 to-green-800",
       bgGradient: "from-green-50 via-emerald-50 to-teal-50",
     },
   ];
@@ -180,7 +180,7 @@ const HowItWorks = () => {
               {/* Card Container */}
               <div
                 ref={(el) => (cardRefs.current[index] = el)}
-                className={`relative bg-gradient-to-br ${step.bgGradient} rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-white/50 backdrop-blur-sm transform-gpu transition-all duration-300 hover:shadow-3xl`}
+                className={`relative bg-gradient-to-br ${step.bgGradient} rounded-3xl p-8 md:p-10 border-2 border-white/50 backdrop-blur-sm transform-gpu transition-all duration-300 h-full flex flex-col`}
                 style={{
                   perspective: "1000px",
                   transformStyle: "preserve-3d",
@@ -190,22 +190,14 @@ const HowItWorks = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/30 to-transparent rounded-bl-full"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-white/20 to-transparent rounded-tr-full"></div>
 
-                {/* Floating Particles Effect */}
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <div className="absolute top-10 left-10 w-2 h-2 bg-gradient-to-r from-[var(--color-primary)] to-transparent rounded-full opacity-60 animate-pulse"></div>
-                  <div className="absolute top-20 right-16 w-1.5 h-1.5 bg-gradient-to-r from-[var(--color-primary)] to-transparent rounded-full opacity-40 animate-pulse delay-300"></div>
-                  <div className="absolute bottom-16 left-20 w-1 h-1 bg-gradient-to-r from-[var(--color-primary)] to-transparent rounded-full opacity-50 animate-pulse delay-700"></div>
-                </div>
-
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-grow">
                   {/* Step Number Badge */}
                   <div className="mb-8 flex justify-center">
                     <div
                       ref={(el) => (numberRefs.current[index] = el)}
-                      className={`relative w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${step.gradient} shadow-xl flex items-center justify-center transform-gpu`}
+                      className={`relative w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center transform-gpu`}
                       style={{
                         transform: "rotate(-5deg)",
-                        boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
                       }}
                     >
                       <span className="text-3xl md:text-4xl font-black text-white drop-shadow-lg">
@@ -218,8 +210,8 @@ const HowItWorks = () => {
 
                   <Heading
                     as="h3"
-                    size="default"
-                    className={`mb-4 text-center bg-gradient-to-r ${step.gradient} bg-clip-text text-transparent `}
+                    size="sm"
+                    className="mb-4 text-center text-green-700"
                   >
                     {step.title}
                   </Heading>
@@ -227,7 +219,7 @@ const HowItWorks = () => {
                   <Text
                     size="md"
                     color="primary"
-                    className="text-gray-700 leading-relaxed"
+                    className="text-gray-700 leading-relaxed flex-grow"
                   >
                     {step.description}
                   </Text>

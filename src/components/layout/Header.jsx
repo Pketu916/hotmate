@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "../common/Button";
 import logo from "../../assets/logo.png";
 
@@ -9,6 +9,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
   const isContactPage = location.pathname === "/contact";
   const isPricingPage =
@@ -73,11 +74,75 @@ const Header = () => {
   }, [lastScrollY, isHomePage, isStaticNavbar]);
 
   const navItems = [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Features", href: "#features", id: "features" },
+    { label: "How It Works", href: "#how-it-works", id: "how-it-works" },
+    { label: "Pricing", href: "#pricing", id: "pricing" },
     { label: "Contact", href: "/contact", isRoute: true },
   ];
+
+  const handleSectionClick = (e, item) => {
+    if (item.isRoute) return; // Let Link handle route navigation
+
+    e.preventDefault();
+    const targetId = item.id || item.href.replace("#", "");
+
+    if (isHomePage) {
+      // On home page, scroll to section
+      const scrollToSection = () => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          const lenisInstance = window.lenisInstance;
+          if (lenisInstance) {
+            lenisInstance.scrollTo(`#${targetId}`, { offset: -80 });
+          } else {
+            const headerHeight = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerHeight;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        } else {
+          // Retry if element not found
+          setTimeout(scrollToSection, 100);
+        }
+      };
+      setTimeout(scrollToSection, 50);
+    } else {
+      // On other pages, navigate to home with hash
+      navigate(`/${item.href}`);
+      // Wait for navigation, then scroll
+      setTimeout(() => {
+        const scrollToSection = () => {
+          const element = document.getElementById(targetId);
+          if (element) {
+            const lenisInstance = window.lenisInstance;
+            if (lenisInstance) {
+              lenisInstance.scrollTo(`#${targetId}`, { offset: -80 });
+            } else {
+              const headerHeight = 80;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerHeight;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          } else {
+            // Retry if element not found
+            setTimeout(scrollToSection, 100);
+          }
+        };
+        scrollToSection();
+      }, 500);
+    }
+
+    // Close mobile menu if open
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -113,7 +178,8 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-gray-900 hover:text-[var(--color-secondary)] transition-colors font-medium"
+                  onClick={(e) => handleSectionClick(e, item)}
+                  className="text-gray-900 hover:text-[var(--color-secondary)] transition-colors font-medium cursor-pointer"
                 >
                   {item.label}
                 </a>
@@ -170,8 +236,8 @@ const Header = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="text-gray-900 hover:text-[var(--color-secondary)] transition-colors font-medium py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => handleSectionClick(e, item)}
+                    className="text-gray-900 hover:text-[var(--color-secondary)] transition-colors font-medium py-2 cursor-pointer"
                   >
                     {item.label}
                   </a>

@@ -1,9 +1,70 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === "/";
+
+  const handleSectionClick = (e, sectionId) => {
+    e.preventDefault();
+
+    if (isHomePage) {
+      // On home page, scroll to section
+      const scrollToSection = () => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const lenisInstance = window.lenisInstance;
+          if (lenisInstance) {
+            lenisInstance.scrollTo(`#${sectionId}`, { offset: -80 });
+          } else {
+            const headerHeight = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerHeight;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        } else {
+          // Retry if element not found
+          setTimeout(scrollToSection, 100);
+        }
+      };
+      setTimeout(scrollToSection, 50);
+    } else {
+      // On other pages, navigate to home with hash
+      navigate(`/#${sectionId}`);
+      // Wait for navigation, then scroll
+      setTimeout(() => {
+        const scrollToSection = () => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const lenisInstance = window.lenisInstance;
+            if (lenisInstance) {
+              lenisInstance.scrollTo(`#${sectionId}`, { offset: -80 });
+            } else {
+              const headerHeight = 80;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerHeight;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          } else {
+            // Retry if element not found
+            setTimeout(scrollToSection, 100);
+          }
+        };
+        scrollToSection();
+      }, 500);
+    }
+  };
 
   return (
     <footer className="bg-[var(--bg-dark)] text-white pt-16 md:pt-20 pb-8 md:pb-10">
@@ -115,7 +176,8 @@ const Footer = () => {
               <li>
                 <a
                   href="/#features"
-                  className="text-gray-400 hover:text-[var(--color-secondary)] transition-colors"
+                  onClick={(e) => handleSectionClick(e, "features")}
+                  className="text-gray-400 hover:text-[var(--color-secondary)] transition-colors cursor-pointer"
                 >
                   Features
                 </a>
@@ -123,7 +185,8 @@ const Footer = () => {
               <li>
                 <a
                   href="/#how-it-works"
-                  className="text-gray-400 hover:text-[var(--color-secondary)] transition-colors"
+                  onClick={(e) => handleSectionClick(e, "how-it-works")}
+                  className="text-gray-400 hover:text-[var(--color-secondary)] transition-colors cursor-pointer"
                 >
                   How It Works
                 </a>
@@ -131,7 +194,8 @@ const Footer = () => {
               <li>
                 <a
                   href="/#pricing"
-                  className="text-gray-400 hover:text-[var(--color-secondary)] transition-colors"
+                  onClick={(e) => handleSectionClick(e, "pricing")}
+                  className="text-gray-400 hover:text-[var(--color-secondary)] transition-colors cursor-pointer"
                 >
                   Pricing
                 </a>
@@ -159,9 +223,8 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-400">
-              <p>123 Food Street</p>
-              <p>Mumbai, Maharashtra 400001</p>
-              <p>India</p>
+              <p>Gandhinagar</p>
+              <p>Gujarat, India</p>
               <p className="mt-4">
                 <a
                   href="tel:+911234567890"

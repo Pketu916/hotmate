@@ -97,7 +97,7 @@ const PreOrder = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Side - Benefits */}
             <div className="lg:col-span-1 space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
                 <div className="text-3xl mb-3">🎁</div>
                 <Heading as="h3" size="sm" className="mb-2 text-gray-900">
                   Pre-Order Benefits
@@ -219,7 +219,7 @@ const PreOrder = () => {
                       </option>
                     </select>
                     {formData.model && models[formData.model] && (
-                      <div className="mt-3 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                      <div className="mt-3 p-4 bg-green-50 rounded-lg border border-green-200">
                         <div className="flex items-baseline gap-2">
                           <span className="text-2xl font-bold text-[var(--color-primary)]">
                             {models[formData.model].price}

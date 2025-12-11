@@ -4,6 +4,7 @@ const Section = forwardRef(
   (
     {
       children,
+      id,
       className = "",
       containerClassName = "",
       background = "default",
@@ -29,6 +30,7 @@ const Section = forwardRef(
 
     return (
       <section
+        id={id}
         ref={ref}
         className={`${backgroundStyles[background]} ${paddingStyles[padding]} ${className}`}
       >

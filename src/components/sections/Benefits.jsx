@@ -112,7 +112,7 @@ const Benefits = () => {
         {/* Hotmate Advantage - Second Card */}
         <div
           ref={card2Ref}
-          className="bg-gradient-to-br from-blue-900/50 to-blue-800/50 p-4 md:p-8 rounded-xl border-2 border-[var(--color-primary)]"
+          className="bg-gradient-to-br from-green-900/50 to-green-800/50 p-4 md:p-8 rounded-xl border-2 border-[var(--color-primary)]"
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white text-xl font-bold">

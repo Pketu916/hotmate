@@ -131,7 +131,7 @@ const Contact = () => {
               </div>
 
               {/* Social Media */}
-              <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+              <div className="p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
                 <Heading as="h3" size="sm" className="mb-4 text-gray-900">
                   Follow Us
                 </Heading>

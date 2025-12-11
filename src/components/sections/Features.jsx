@@ -26,7 +26,7 @@ const Features = () => {
       description:
         "An optimized power cell keeps your food warm for up to 8 hours on a single charge. USB-C rechargeable.",
       icon: "🔋",
-      gradient: "from-blue-50 via-purple-50 to-indigo-50",
+      gradient: "from-green-50 via-emerald-50 to-teal-50",
     },
     {
       title: "Featherlight Build",
@@ -40,7 +40,7 @@ const Features = () => {
       description:
         "Built-in sensors prevent overheating and ensure stable, even heating without hot spots. FDA approved materials.",
       icon: "🛡️",
-      gradient: "from-purple-50 via-indigo-50 to-blue-50",
+      gradient: "from-green-50 via-emerald-50 to-teal-50",
     },
   ];
 
@@ -107,7 +107,7 @@ const Features = () => {
 
         {/* Right Side - Sticky Content */}
         <div className="relative">
-          <div ref={cardsContainerRef} className="w-full space-y-10 pt-36">
+          <div ref={cardsContainerRef} className="w-full space-y-10 md:pt-36">
             {features.map((feature, index) => (
               <div
                 key={index}

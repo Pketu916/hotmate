@@ -1,12 +1,17 @@
 :root {
     /* Colors - Modern tech/product palette */
-    --color-primary: #1E40AF;
-    --color-primary-light: #3B82F6;
-    --color-primary-dark: #1E3A8A;
+    --color-primary: #1A0F09;
+    --color-primary-light: #2C1810;
+    --color-primary-dark: #0F0805;
 
     --color-secondary: #F59E0B;
     --color-secondary-light: #FBBF24;
     --color-secondary-dark: #D97706;
+
+    /* Help/Accent Color - Orange */
+    --color-help: #F97316;
+    --color-help-light: #FB923C;
+    --color-help-dark: #EA580C;
 
     --color-accent: #8B6F47;
     --color-accent-light: #A6895F;
