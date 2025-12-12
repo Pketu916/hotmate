@@ -138,7 +138,7 @@ const Contact = () => {
                 <div className="flex gap-3">
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="Facebook"
                   >
                     <svg
@@ -151,8 +151,10 @@ const Contact = () => {
                     </svg>
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    href="https://www.instagram.com/hotmate_1116"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="Instagram"
                   >
                     <svg
@@ -166,7 +168,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="Twitter"
                   >
                     <svg
@@ -180,7 +182,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="LinkedIn"
                   >
                     <svg
@@ -194,7 +196,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="YouTube"
                   >
                     <svg

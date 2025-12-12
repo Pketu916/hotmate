@@ -103,10 +103,13 @@ a:hover {
 /* Focus styles */
 input:focus,
 select:focus,
-textarea:focus,
-button:focus {
+textarea:focus {
     outline: 2px solid var(--color-secondary);
     outline-offset: 2px;
+}
+
+button:focus {
+    outline: none;
 }
 
 /* Selection */
@@ -162,6 +165,25 @@ button:focus {
 .swiper-button-next,
 .swiper-button-prev {
     display: none !important;
+}
+
+.product-swiper {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+.product-swiper .swiper-wrapper {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+.product-swiper .swiper-slide {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .swiper-pagination-bullet-custom {

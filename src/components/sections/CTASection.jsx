@@ -87,7 +87,7 @@ const CTASection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
     >
       {/* Background Video */}
       <div className="absolute inset-0 z-0 flex items-center justify-center md:p-8 p-4">

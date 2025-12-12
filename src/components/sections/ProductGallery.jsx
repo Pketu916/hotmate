@@ -75,6 +75,15 @@ const ProductGallery = () => {
           slidesPerView={1.2}
           centeredSlides={true}
           loop={true}
+          loopedSlides={2}
+          speed={600}
+          touchRatio={1}
+          touchAngle={45}
+          resistance={true}
+          resistanceRatio={0.85}
+          preventClicks={true}
+          preventClicksPropagation={true}
+          watchOverflow={true}
           pagination={{
             clickable: true,
             bulletClass: "swiper-pagination-bullet-custom",
@@ -82,18 +91,21 @@ const ProductGallery = () => {
           }}
           autoplay={{
             delay: 3000,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
           }}
           breakpoints={{
             640: {
               slidesPerView: 2.2,
               spaceBetween: 15,
               centeredSlides: true,
+              loopedSlides: 3,
             },
             1024: {
               slidesPerView: 3,
               spaceBetween: 30,
               centeredSlides: false,
+              loopedSlides: 3,
             },
           }}
           className="product-swiper"
@@ -138,7 +150,7 @@ const ProductGallery = () => {
       <div className="flex justify-center gap-4 mt-8 container px-5">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className="bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all duration-300"
+          className="bg-gray-800 text-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:bg-orange-500 transition-all duration-300 focus:outline-none"
           aria-label="Previous slide"
         >
           <svg
@@ -157,7 +169,7 @@ const ProductGallery = () => {
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className="bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all duration-300"
+          className="bg-gray-800 text-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:bg-orange-500 transition-all duration-300 focus:outline-none"
           aria-label="Next slide"
         >
           <svg
