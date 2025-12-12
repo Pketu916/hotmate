@@ -131,14 +131,14 @@ const Contact = () => {
               </div>
 
               {/* Social Media */}
-              <div className="p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+              <div className="p-6 bg-gradient-to-t from-green-600 to-white rounded-xl border border-green-200">
                 <Heading as="h3" size="sm" className="mb-4 text-gray-900">
                   Follow Us
                 </Heading>
                 <div className="flex gap-3">
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
+                    className="w-10 h-10 text-green-500 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="Facebook"
                   >
                     <svg
@@ -154,7 +154,7 @@ const Contact = () => {
                     href="https://www.instagram.com/hotmate_1116"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
+                    className="w-10 h-10 text-green-500 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="Instagram"
                   >
                     <svg
@@ -168,7 +168,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
+                    className="w-10 h-10 text-green-500 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="Twitter"
                   >
                     <svg
@@ -182,7 +182,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
+                    className="w-10 h-10 text-green-500 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="LinkedIn"
                   >
                     <svg
@@ -196,7 +196,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
+                    className="w-10 h-10 text-green-500 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none"
                     aria-label="YouTube"
                   >
                     <svg
@@ -263,7 +263,6 @@ const Contact = () => {
                       className="block text-left text-sm font-semibold text-gray-700 mb-2"
                     >
                       Phone Number{" "}
-                      <span className="text-gray-500">(Optional)</span>
                     </label>
                     <input
                       type="tel"

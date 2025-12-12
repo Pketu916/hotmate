@@ -89,7 +89,7 @@ const Footer = () => {
               <div className="flex gap-3">
                 <a
                   href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 focus:outline-none"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:text-white hover:bg-orange-500 transition-all duration-300 focus:outline-none"
                   aria-label="Facebook"
                 >
                   <svg
@@ -105,7 +105,7 @@ const Footer = () => {
                   href="https://www.instagram.com/hotmate_1116"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 focus:outline-none"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:text-white hover:bg-orange-500 transition-all duration-300 focus:outline-none"
                   aria-label="Instagram"
                 >
                   <svg
@@ -119,7 +119,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 focus:outline-none"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:text-white hover:bg-orange-500 transition-all duration-300 focus:outline-none"
                   aria-label="Twitter"
                 >
                   <svg
@@ -133,7 +133,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 focus:outline-none"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:text-white hover:bg-orange-500 transition-all duration-300 focus:outline-none"
                   aria-label="LinkedIn"
                 >
                   <svg
@@ -147,7 +147,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 focus:outline-none"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:text-white hover:bg-orange-500 transition-all duration-300 focus:outline-none"
                   aria-label="YouTube"
                 >
                   <svg
