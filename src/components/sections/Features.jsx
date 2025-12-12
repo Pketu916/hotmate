@@ -19,28 +19,28 @@ const Features = () => {
       description:
         "Dial in the exact warmth you need, from a gentle reheat to piping hot, with a simple touch interface.",
       icon: "🎛️",
-      gradient: "from-orange-50 via-red-50 to-pink-50",
+      gradient: "from-green-600 to-white",
     },
     {
       title: "All-Day Power",
       description:
         "An optimized power cell keeps your food warm for up to 8 hours on a single charge. USB-C rechargeable.",
       icon: "🔋",
-      gradient: "from-green-50 via-emerald-50 to-teal-50",
+      gradient: "from-green-600 to-white",
     },
     {
       title: "Featherlight Build",
       description:
         "Crafted from aerospace-grade, durable materials. Hotmate adds virtually no bulk to your daily commute.",
       icon: "✨",
-      gradient: "from-green-50 via-emerald-50 to-teal-50",
+      gradient: "from-green-600 to-white",
     },
     {
       title: "Intelligent Safety",
       description:
         "Built-in sensors prevent overheating and ensure stable, even heating without hot spots. FDA approved materials.",
       icon: "🛡️",
-      gradient: "from-green-50 via-emerald-50 to-teal-50",
+      gradient: "from-green-600 to-white",
     },
   ];
 
@@ -116,7 +116,7 @@ const Features = () => {
               >
                 <div
                   ref={(el) => (cardInnersRef.current[index] = el)}
-                  className={`features-card-inner p-4 md:p-5 rounded-xl bg-gradient-to-br ${feature.gradient} flex flex-col gap-3 items-center md:items-start`}
+                  className={`features-card-inner p-4 md:p-5 rounded-xl bg-gradient-to-t ${feature.gradient} flex flex-col gap-3 items-center md:items-start`}
                 >
                   <div className="features-card-icon">
                     <div className="text-4xl sm:text-5xl md:text-6xl">

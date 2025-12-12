@@ -75,7 +75,7 @@ const ProductGallery = () => {
           slidesPerView={1.2}
           centeredSlides={true}
           loop={true}
-          loopedSlides={2}
+          // loopedSlides={2}
           speed={600}
           touchRatio={1}
           touchAngle={45}
@@ -90,22 +90,23 @@ const ProductGallery = () => {
             bulletActiveClass: "swiper-pagination-bullet-active-custom",
           }}
           autoplay={{
-            delay: 3000,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: true,
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            waitForTransition: true,
           }}
           breakpoints={{
             640: {
               slidesPerView: 2.2,
               spaceBetween: 15,
               centeredSlides: true,
-              loopedSlides: 3,
+              // loopedSlides: 3,
             },
             1024: {
               slidesPerView: 3,
               spaceBetween: 30,
               centeredSlides: false,
-              loopedSlides: 3,
+              // loopedSlides: 3,
             },
           }}
           className="product-swiper"

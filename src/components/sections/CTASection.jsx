@@ -32,7 +32,7 @@ const CTASection = () => {
     });
 
     // Calculate scroll range
-    const scrollRange = 2000;
+    const scrollRange = 1500;
 
     // Create timeline with pinning and animations
     const tl = gsap.timeline({
